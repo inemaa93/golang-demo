@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	var name string = "негр"
+	var name string = "Dегр"
 	var addr string = "127.0.0.1:8080"
 	var password string = fmt.Sprintf("%s%s123", name, name)
 
