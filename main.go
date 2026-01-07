@@ -13,6 +13,9 @@ func main() {
 	var addr string = "127.0.0.1:8080"
 	var password string = fmt.Sprintf("%s%s123", name, name)
 
+	// Hello World
+	fmt.Println("hello world")
+
 	// hash password
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
 	if err != nil {
@@ -29,6 +32,7 @@ func main() {
 `, string(hashedPassword))
 
 		_, _ = w.Write([]byte(htmlDoc))
+
 	})
 
 	log.Printf("listening on http://%s\n", addr)
